@@ -1,15 +1,20 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
+    <!-- Basic meta tags for character encoding and responsive design -->
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- Title block that can be overridden by templates that extend this one -->
     <title>{% block title %}App Template{% endblock %}</title>
+    <!-- Link to stylesheet using Flask's url_for helper -->
     <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
 </head>
 <body>
+    <!-- Simple header with app name -->
     <header>
         <h1>App Template</h1>
     </header>
+    <!-- Main content area where child templates will insert their content -->
     <main>
         {% block content %}{% endblock %}
     </main>
